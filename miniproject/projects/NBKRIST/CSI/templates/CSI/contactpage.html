@@ -1,0 +1,52 @@
+{% extends './base.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CONTACT FORM PAGE</title>
+
+  </head>
+  <body style="padding-top:100px;">
+    <div class="container">
+
+
+    <div class="row">
+      <div class="row">
+        <div class="col">
+
+
+        <a  href="{%url 'home' %}" class="btn btn-dark my-7">Go Back</a>
+    </div>
+
+      </div>
+    {% for message in messages %}
+  <div class="container-fluid p-0">
+    <div class="alert {{ message.tags }} alert-dismissible" role="alert" >
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      {{ message }}
+    </div>
+  </div>
+  {% endfor %}
+<center>
+  <h1>CSI CONTACT FORM </h1>
+  <h4>PLEASE PROVIDE CORRECT DETAILS, FAILING WHICH WE WILL NOT BE ABLE TO CONTACT YOU BACK</h4>
+  <hr>
+  <form method="POST" >
+    {% csrf_token %}
+  <table>
+  <div class="container">
+  {{form}}
+    </div>
+    </table>
+    <input type="submit" value="Send">
+</form>
+  </center>
+      </div>
+  </body>
+</html>
+{% endblock %}

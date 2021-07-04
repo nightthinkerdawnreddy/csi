@@ -1,0 +1,468 @@
+{% extends './base.html' %}
+{% load static %}
+
+{% block content  %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>office Bearers </title>
+    <link rel="stylesheet" href="{% static 'css/testing.css' %}">
+    <link rel="stylesheet" href="{% static 'css/testing2.css' %}">
+    <link rel="stylesheet" href="{% static 'css/testing3.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{%static 'css/style.css' %}">
+          <link rel="stylesheet" href="{%static 'css/responsive.css' %}">
+          <link rel="stylesheet" href="{%static 'css/jquery.mCustomScrollbar.min.css' %}">
+          <link rel="stylesheet" href="{% static 'https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' %}">
+          <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css' %} media="screen" >
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+          <script type="text/javascript">
+            // '.tbl-content' consumed little space for vertical scrollbar, scrollbar width depend on browser/os/platfrom. Here calculate the scollbar width .
+      $(window).on("load resize ", function() {
+        var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+        $('.tbl-header').css({'padding-right':scrollWidth});
+      }).resize();
+
+          </script>
+    <style media="screen">
+
+h1{
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 15px;
+}
+table{
+  width:100%;
+  table-layout: fixed;
+}
+.tbl-header{
+  background-color: rgba(255,255,255,0.3);
+ }
+.tbl-content{
+  height:200px;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+th{
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 19px;
+  color: #000000;
+  text-transform: uppercase;
+}
+td{
+  padding: 10px;
+  text-align: left;
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 15px;
+  color: #fff;
+  border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+@media (min-aspect-ratio: 16/9) {
+  #videoBG {
+      width:100%;
+      height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+    #videoBG {
+        width:auto;
+        height: 100%;
+    }
+}
+@media (max-width:400px) {
+    #videoBG {
+    width:auto;
+        height: auto;
+
+
+    }
+}
+@media all and (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  li {
+    font-size: 0.5rem;
+    padding: .75rem;
+    line-height:0.5px;
+
+  }
+
+  li span {
+    font-size: 3.375rem;
+  }
+  #tableheading{
+    font-size:15px;
+  }
+  td{
+    padding: 8px;
+    text-align: left;
+    vertical-align:middle;
+    font-weight: 300;
+    font-size: 10px;
+    color: #fff;
+    border-bottom: solid 1px rgba(255,255,255,0.1);
+  }
+
+}
+
+
+
+/* demo styles */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+body{
+  background: -webkit-linear-gradient(left, #552586, ##6A359C);
+  background: linear-gradient(to right, #ABB2B9, #6A359C  );
+  font-family: 'Roboto', sans-serif;
+}
+section{
+  margin: 50px;
+}
+
+
+/* follow me template */
+
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+    </style>
+  </head>
+  <body>
+
+
+
+
+    <section >
+  <!--for demo wrap-->
+
+  <h1 style="padding-top:50px">NBKRIST CSI SB OFFICE BEARERS</h1>
+  <div class="tbl-header" >
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th id ="tableheading" colspan="2">OFFICE BEARERS</th>
+
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        <tr>
+          <td>Dr.S.Maruthuperumal, Professor</td>
+          <td>CSI Student Branch Counselor., Professor & HOD</td>
+        </tr>
+        <tr>
+          <td>Mr. M.Siva Pratap Reddy, Asst. Prof.</td>
+          <td>Faculty Coordinator CSI Student Branch</td>
+        </tr>
+        <tr>
+          <td>Mr P.Nagendra, Asst. Prof.</td>
+          <td>Faculty Coordinator CSI Student Branch</td>
+        </tr>
+        <tr>
+          <td>Mr K.Penchalaiah, Asst. Prof.</td>
+          <td>Faculty Coordinator CSI Student Branch</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th  id ="tableheading" colspan="2">CSI – Student Branch Advisory Committee</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        <tr>
+          <td>Prof. M.Nataraja Suresh, Professor, CSE</td>
+        </tr>
+        <tr>
+          <td>Dr.A.Rajasekhar Reddy, Professor, CSE</td>
+        </tr>
+        <tr>
+          <td>Mr.D.Srinivasa Rao, Assoc. Prof, CSE</td>
+        </tr>
+        <tr>
+          <td>Mr.T.V. Mahendra, Assoc. Prof, CSE</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+
+
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th  id ="tableheading" colspan="2">CSI – Student Branch Technical Support Wing</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div>
+    <table cellpadding="0" cellspacing="0" border="1">
+      <tbody>
+        <tr>
+          <td>Mr. V.SaiCharan, Asst. Prof. CSE</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th id ="tableheading" colspan="2">Office Bearers for the Academic Year(2020-21)</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        <tr>
+          <td>Mr.N.Tarun Sundar </td>
+          <td>IV CSE <br>(17KB1A05A7)</td>
+          <td>Student President of CSI-SB</td>
+        </tr>
+        <tr>
+          <td>Ms. Sai Keerthana Tanguturu </td>
+          <td>III CSE <br>(18KB1A05C8)</td>
+          <td>Student Vice-President of CSI-SB</td>
+        </tr>
+        <tr>
+          <td>Mr.E.Akhil Kumar</td>
+          <td>II CSE <br>(19KB1A0544)</td>
+          <td>Student Treasurer of CSI-SB</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th id ="tableheading" colspan="2">Office Bearers for the Academic Year(2019-20)</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        <tr>
+          <td>Ms.K.V.L.Anupama</td>
+          <td>IV CSE <br>(16KB1A0565)</td>
+          <td>Student President of CSI-SB</td>
+        </tr>
+        <tr>
+          <td>Mr.T.Sai Krishna Reddy </td>
+          <td>III CSE <br>  (17KB1A05D7) </td>
+          <td>Student Vice-President of CSI-SB</td>
+        </tr>
+        <tr>
+          <td>Mr.P.Chandu</td>
+          <td>II CSE <br>(18KB1A05B3).</td>
+          <td>Student Treasurer of CSI-SB</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th id ="tableheading" colspan="2">Office Bearers for the Academic Year(2018-19)</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        <tr>
+          <td>Mr.C.Balaji</td>
+          <td>IV CSE <br>(15KB1A0518)</td>
+          <td>Student President of CSI-SB</td>
+        </tr>
+        <tr>
+          <td>Ms.K.Lakshmi</td>
+          <td>III CSE <br>(16KB1A0559)</td>
+          <td>Student Vice-President of CSI-SB</td>
+        </tr>
+        <tr>
+          <td>Mr.B.Sumanth Reddy</td>
+          <td>II CSE <br>(17KB1A0519)</td>
+          <td>Student Treasurer of CSI-SB</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th id ="tableheading"  colspan="2">Office Bearers for the Academic Year(2017-18)</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        <tr>
+          <td>Ms.S. Sandhya</td>
+          <td>IV CSE  <br>(14KB1A0581)   </td>
+          <td>Student President of CSI-SB</td>
+        </tr>
+        <tr>
+          <td>Ms.R.Mayuri</td>
+          <td>III CSE <br>(15KB1A0570)</td>
+          <td>Student Vice-President of CSI-SB</td>
+        </tr>
+        <tr>
+          <td>Mr.Shaik Althaf</td>
+          <td>II CSE <br>(16KB1A05D7)</td>
+          <td>Student Treasurer of CSI-SB</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th id ="tableheading" colspan="2">Office Bearers for the Academic Year(2016-17)</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        <tr>
+          <td>Mr.K. Sai Srikar</td>
+          <td>IV CSE  <br>(13KB1A0542) </td>
+          <td>Student President of CSI-SB</td>
+        </tr>
+        <tr>
+          <td>Ms.B.Swathi</td>
+          <td>III CSE <br>(14KB1A0511)</td>
+          <td>Student Vice-President of CSI-SB</td>
+        </tr>
+        <tr>
+          <td>Ms.D.Nishitha</td>
+          <td>II CSE <br>(15KB1A0524)</td>
+          <td>Student Treasurer of CSI-SB</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <div class="tbl-header">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th id ="tableheading" colspan="2">Office Bearers for the Academic Year(2015-16)</th>
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        <tr>
+          <td>Mr.G.Madhan Gopal Reddy</td>
+          <td>IV CSE  <br>(12AAU06024) </td>
+          <td>Student President of CSI-SB</td>
+        </tr>
+        <tr>
+          <td>Ms.M.Keerthi</td>
+          <td>III CSE <br>(13KB1A0550)</td>
+          <td>Student Vice-President of CSI-SB</td>
+        </tr>
+        <tr>
+          <td>Mr.B.Naveen Kumar Reddy</td>
+          <td>II CSE <br>(14KB1A0515)</td>
+          <td>Student Treasurer of CSI-SB</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+
+
+
+  </body>
+</html>
+
+{% endblock %}

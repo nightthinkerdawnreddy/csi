@@ -1,0 +1,144 @@
+{% extends './base.html' %}
+{% load static %}
+{% block content %}
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Upcoming</title>
+    <script type="text/javascript">
+      (function () {
+      const second = 1000,
+            minute = second * 60,
+            hour = minute * 60,
+            day = hour * 24;
+
+      let events = "JUL 10, 2021 00:00:00",
+          countDown = new Date(events).getTime(),
+          x = setInterval(function() {
+
+            let now = new Date().getTime(),
+                distance = countDown - now;
+
+            document.getElementById("days").innerText = Math.floor(distance / (day)),
+              document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+              document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+              document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+            //do something later when date is reached
+            if (distance < 0) {
+              let headline = document.getElementById("headline"),
+                  countdown = document.getElementById("countdown"),
+                  content = document.getElementById("content");
+
+              headline.innerText = "It's a event!";
+              countdown.style.display = "none";
+              content.style.display = "block";
+
+              clearInterval(x);
+            }
+            //seconds
+          }, 0)
+      }());
+    </script>
+<style media="screen">
+@media (min-aspect-ratio: 16/9){
+    .container {
+      color: #333;
+
+      text-align: center;
+    }
+h1{
+  font-size:60px;
+}
+
+
+li {
+  display: inline-block;
+  font-size: 1.5em;
+  list-style-type: none;
+  padding: 1em;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 4.5rem;
+}
+#upcomingcard{
+    width: 60rem;
+     height:70rem;
+     margin-top:100px;
+     margin-left:350px;
+     margin-bottom:100px;
+  }
+  #imageofevent{
+  height:600px;
+  width:500px;
+  }
+}
+}
+@media (max-width: 400px) {
+  #upcomingcard{
+width:40%;
+  margin-top:400px;
+  }
+
+  h1{
+    font-size:60px;
+  }
+  .container {
+    color: #333;
+
+    text-align: center;
+  }
+  #imageofevent{
+    width:10px;
+    height:10px;
+  }
+
+  li {
+    display: inline-block;
+    font-size: 1em;
+    list-style-type: none;
+    padding: 1em;
+    text-transform: uppercase;
+  }
+
+  li span {
+    display: block;
+    font-size: 4.5rem;
+  }
+  .card-body{
+    padding-top:600px;
+  }
+
+}
+</style>
+  </head>
+  <body align="center">
+
+           <div id="upcomingcard" align="center" class="card" style=" background-image:url('{% static "images/gradientnew.jpg" %}');">
+
+             <div  class="card-body">
+               <h1 class="card-title">UPCOMING EVENT</h1>
+               <p class="card-text">WE ARE HERE TO CONDUCT AN EXCITING EVENT.</p>
+
+<img id="imageofevent" src="{% static 'images/upcoming.svg'  %}"   alt="">
+<h3 id="headline">REGISTRATIONS WILL CLOSE WITHIN </h3>
+<div id="countdown">
+<ul>
+<li><span id="days"></span>days</li>
+<li><span id="hours"></span>Hours</li>
+<li><span id="minutes"></span>Minutes</li>
+<li><span id="seconds"></span>Seconds</li>
+</ul>
+</div>
+             <a href="{% url 'registrations' %}" class="btn btn-primary">REGISTER NOW</a>
+
+             </div>
+           </div>
+  </body>
+</html>
+{% endblock %}

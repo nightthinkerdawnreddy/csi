@@ -1,0 +1,109 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>CSI WEBSTIE</title>
+    <link rel="stylesheet" href="{% static 'css/testing.css' %}">
+    <link rel="stylesheet" href="{% static 'css/testing2.css' %}">
+    <link rel="stylesheet" href="{% static 'css/testing3.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}">
+      <link rel="stylesheet" href="{%static 'css/style.css' %}">
+        <link rel="stylesheet" href="{%static 'css/responsive.css' %}">
+        <link rel="stylesheet" href="{%static 'css/jquery.mCustomScrollbar.min.css' %}">
+        <link rel="stylesheet" href="{% static 'https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' %}">
+        <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css' %}">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+      <style>
+
+        @media (max-width:400px) {
+            #heading{
+            width:100%;
+
+            }
+
+}
+</style>
+      </head>
+
+      <div class="w3-top" id="heading">
+        <div class="w3-bar w3-grey" id="myNavbar">
+            <img src="{% static 'images/NBKRLOGO.png'%}" width="60px" height="60px" alt="">
+              <img src="{% static 'images/CSILOGOS.png'%}" width="60px" height="60px" border-radius="50px" alt="">
+          <a href="{% url 'home' %}" class="w3-bar-item w3-button w3-wide">CSI</a>
+          <!-- Right-sided navbar links -->
+          <div class="w3-right w3-hide-small" >
+            <a href="home" class="w3-bar-item w3-button"><i class="fa fa-home"></i>HOME</a>
+
+              <button class="btn btn-secondary " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                DETAILS OF EVENTS
+              </button>
+              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="snaps">PAST EVENTS</a>
+                <a class="dropdown-item" href="upcoming">UPCOMING EVENTS</a>
+            </div>
+
+          </div>
+          <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+          <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-medium  w3-hide-large " onclick="w3_open()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Sidebar on small screens when clicking the menu icon -->
+      <nav class="w3-sidenav w3-collapse  w3-bar-block  w3-black w3-card w3-hide-medium w3-hide-large" id="mySidebar">
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close X</a>
+        <a href="home" onclick="w3_close()" class="w3-bar-item w3-button">HOME</a>
+
+        <button class="btn btn-secondary " type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          DETAILS OF EVENTS
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="snaps">PAST EVENTS</a>
+          <a class="dropdown-item" href="upcoming">FUTURE EVENTS</a>
+      </div>
+
+      </nav>
+      <script>
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+
+
+      // Toggle between showing and hiding the sidebar when clicking the menu icon
+      var mySidebar = document.getElementById("mySidebar");
+
+      function w3_open() {
+        if (mySidebar.style.display === 'block') {
+          mySidebar.style.display = 'none';
+        } else {
+          mySidebar.style.display = 'block';
+        }
+      }
+
+      // Close the sidebar with the close button
+      function w3_close() {
+          mySidebar.style.display = "none";
+      }
+
+      </script>
+    
+{% block content %}
+
+{% endblock %}
+  </body>
+
+</html>

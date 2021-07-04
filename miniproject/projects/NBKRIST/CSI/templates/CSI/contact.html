@@ -1,0 +1,47 @@
+{% extends './base.html' %}
+{% block content %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body style="padding-top:100px;">
+    {% for message in messages %}
+  <div class="container-fluid p-0">
+    <div class="alert {{ message.tags }} alert-dismissible" role="alert" >
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+      {{ message }}
+    </div>
+  </div>
+  {% endfor %}
+    <div class="container">
+<h3>CSI CONTACT FORM</h3>
+<form action="/contact" method="post">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="name">NAME</label>
+    <input type="text" class="form-control" name="name" id="name" aria-describedby="name">
+  </div>
+  <div class="form-group">
+    <label for="email">EMAIL ADDRESS(COLLEGE MAIL ID)</label>
+    <input type="email" class="form-control"name="email" id="email" aria-describedby="emailHelp">
+  </div>
+  <div class="form-group">
+    <label for="content">YEAR</label>
+    <textarea class="form-control" id="content" name="content" rows="8" cols="80"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">SUBMIT</button>
+
+</form>
+
+
+
+    </div>
+  </body>
+</html>
+{% endblock %}

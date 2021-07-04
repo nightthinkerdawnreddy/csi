@@ -1,0 +1,280 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>office Bearers </title>
+    <link rel="stylesheet" href="{% static 'css/testing.css' %}">
+    <link rel="stylesheet" href="{% static 'css/testing2.css' %}">
+    <link rel="stylesheet" href="{% static 'css/testing3.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      <link rel="stylesheet" href="{%static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{%static 'css/style.css' %}">
+          <link rel="stylesheet" href="{%static 'css/responsive.css' %}">
+          <link rel="stylesheet" href="{%static 'css/jquery.mCustomScrollbar.min.css' %}">
+          <link rel="stylesheet" href="{% static 'https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css' %}">
+          <link rel="stylesheet" href="{% static 'https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css' %} media="screen" >
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+          <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+          <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script type="text/javascript">
+      // '.tbl-content' consumed little space for vertical scrollbar, scrollbar width depend on browser/os/platfrom. Here calculate the scollbar width .
+$(window).on("load resize ", function() {
+  var scrollWidth = $('.tbl-content').width() - $('.tbl-content table').width();
+  $('.tbl-header').css({'padding-right':scrollWidth});
+}).resize();
+
+    </script>
+    <style media="screen">
+
+h1{
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 15px;
+}
+table{
+  width:100%;
+  table-layout: fixed;
+}
+.tbl-header{
+  background-color: rgba(255,255,255,0.3);
+ }
+.tbl-content{
+  height:auto;
+  overflow-x:auto;
+  margin-top: 0px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+th{
+  padding: 20px 15px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 19px;
+  color: #000000;
+  text-transform: uppercase;
+}
+td{
+  padding: 15px;
+  text-align: left;
+  vertical-align:middle;
+  font-weight: 300;
+  font-size: 15px;
+  color: #fff;
+  border-bottom: solid 1px rgba(255,255,255,0.1);
+}
+
+
+/* demo styles */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+body{
+  background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+  background: linear-gradient(to right, #ABB2B9, #17202A  );
+  font-family: 'Roboto', sans-serif;
+}
+section{
+  margin: 50px;
+}
+
+
+/* follow me template */
+
+
+/* for custom scrollbar for webkit browser*/
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+    </style>
+  </head>
+  <body>
+
+
+    <div class="w3-top"  >
+      <div class="w3-bar w3-grey" id="myNavbar">
+          <img src="{% static 'images/NBKRLOGO.png'%}" width="60px" height="60px" alt="">
+            <img src="{% static 'images/CSILOGO.png'%}" width="60px" height="60px" border-radius="50px" alt="">
+        <a href="#home" class="w3-bar-item w3-button w3-wide">CSI</a>
+        <!-- Right-sided navbar links -->
+        <div class="w3-right w3-hide-small" >
+          <a href="home" class="w3-bar-item w3-button"><i class="fa fa-home"></i>HOME</a>
+
+        </div>
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+
+      </div>
+    </div>
+
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav class="w3-sidebar  w3-bar-block  w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" id="mySidebar">
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+      <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#events" onclick="w3_close()" class="w3-bar-item w3-button">EVENTS</a>
+      <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">GALLERY</a>
+      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+    </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <section >
+  <!--for demo wrap-->
+
+  <h1 style="padding-top:50px">CSI EVENTS TILL DATE</h1>
+  <div class="tbl-header" >
+    <table cellpadding="0" cellspacing="0" border="0">
+      <thead>
+        <tr>
+          <th colspan="2">EVENTS LIST</th>
+
+        </tr>
+      </thead>
+    </table>
+  </div>
+  <div class="tbl-content">
+    <table cellpadding="0" cellspacing="0" border="0">
+      <tbody>
+        <tr>
+          <td>1.</td>
+          <td> WORKSHOP " THE WORLD OF DATA"</td>
+        </tr>
+        <tr>
+          <td>2.</td>
+          <td> "COFFEE WITH JAVA"</td>
+        </tr>
+        <tr>
+          <td>3.</td>
+          <td> "TECHIE-AT-WEBRTC"</td>
+        </tr>
+        <tr>
+          <td>4.</td>
+          <td>"CODE BRIGADE"</td>
+        </tr>
+        <tr>
+          <td>5.</td>
+          <td> "TECHNOFRENZY"</td>
+        </tr>
+        <tr>
+          <td>6.</td>
+          <td>"TECHSPARK"</td>
+        </tr>
+        <tr>
+          <td>7.</td>
+          <td> E-POSTER PRESENTATION</td>
+        </tr>
+        <tr>
+          <td>8.</td>
+          <td>TECHNOPHILIA</td>
+        </tr>
+        <tr>
+          <td>9.</td>
+          <td>CSI FOUNDATION DAY QUIZ</td>
+        </tr>
+        <tr>
+          <td>10.</td>
+          <td>"UNITE WITH CODE BRIGADE"</td>
+        </tr>
+        <tr>
+          <td>11.</td>
+          <td> "MOBILIZE WITH CODE STORM"</td>
+        </tr>
+        <tr>
+          <td>12.</td>
+          <td> "DREAM MAKERS"</td>
+        </tr>
+        <tr>
+          <td>13.</td>
+          <td> "TRAVEL INTO APP DEVELOPMENT"</td>
+        </tr>
+        <tr>
+          <td>14.</td>
+          <td> "WHIMSICAL WEB WINDOW"</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</section>
+
+
+
+  </body>
+</html>
